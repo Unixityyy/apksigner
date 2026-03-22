@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web APK Signer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/node-forge/1.3.1/forge.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>APK Toolset</h1>
+        
+        <section>
+            <h3>Sign Existing APK</h3>
+            <div class="input-group">
+                <input type="file" id="apkFile" accept=".apk">
+                <input type="file" id="keystoreFile" placeholder="Keystore">
+                <input type="text" id="alias" placeholder="Alias (e.g. android)">
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <button id="signBtn">Sign & Download</button>
+        </section>
+
+        <section>
+            <h3>Generate Keystore</h3>
+            <div class="input-group">
+                <input type="text" id="newAlias" placeholder="New Alias">
+                <input type="password" id="newPass" placeholder="New Password">
+            </div>
+            <button id="genBtn">Create .p12 Keystore</button>
+        </section>
+
+        <div id="status">Ready</div>
+        <div class="footer-info">Runs locally in browser • No files uploaded</div>
+    </div>
+</body>
+</html>

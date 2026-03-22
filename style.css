@@ -1,0 +1,142 @@
+:root {
+    --bg: #121212;
+    --card: #1e1e1e;
+    --primary: #bb86fc;
+    --secondary: #03dac6;
+    --text: #e0e0e0;
+    --error: #cf6679;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #333;
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-top: 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+section {
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="file"], input[type="text"], input[type="password"] {
+    background: #2c2c2c;
+    border: 1px solid #444;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.3s;
+    margin-top: 10px;
+}
+
+#signBtn {
+    background: var(--primary);
+    color: #000;
+}
+
+#genBtn {
+    background: transparent;
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#status {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #aaa;
+    min-height: 1.2rem;
+}
+
+.footer-info {
+    font-size: 0.7rem;
+    color: #666;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Style the "Choose File" button specifically */
+input[type="file"]::file-selector-button {
+    background-color: #333;
+    color: var(--secondary);
+    border: 1px solid #444;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background 0.2s;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #444;
+    border-color: var(--secondary);
+}
+
+/* Ensure the text next to the button is also readable */
+input[type="file"] {
+    color: #888;
+    font-size: 0.8rem;
+}
